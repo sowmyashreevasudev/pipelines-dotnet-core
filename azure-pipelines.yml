@@ -14,7 +14,7 @@ variables:
   Major: '1'
   Minor: '0'
  # Patch: 'Patch number'
-#Use below line if you want to mention patch# with same version#
+#Use below line if you want to mention patch# along with same version#
 #name: $(Major).$(Minor).$(Patch)
 name: $(Major).$(Minor).$(rev:r)
 steps:
