@@ -38,7 +38,7 @@ steps:
         failBuildLevelSelector: 'Error'
         failBuildOnCodeIssues: true
         additionalArguments: /disable-settings-layers:SolutionPersonal --properties:Configuration=$(BuildConfiguration)
-        resultsOutputFilePath: $(Build.ArtifactStagingDirectory)/tests-results/ReportGenerator/ResharperResults.xml
+        resultsOutputFilePath: $(System.DefaultWorkingDirectory)\tests-results\ReportGenerator\ResharperResults.xml
 
 - task: DotNetCoreCLI@2
   inputs:
