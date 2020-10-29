@@ -36,8 +36,7 @@ steps:
   inputs:
         solutionOrProjectPath: '**/*.csproj'
         failBuildLevelSelector: 'Warning'
-  
-# do this after other tasks such as building
+
 - task: DotNetCoreCLI@2
   inputs:
     command: test
@@ -49,8 +48,6 @@ steps:
         testResultsFormat: 'XUnit'
         testResultsFiles: '**/TEST-*.xml'
 
-
-# do this after other tasks such as building
 - task: DotNetCoreCLI@2
   inputs:
     command: test
