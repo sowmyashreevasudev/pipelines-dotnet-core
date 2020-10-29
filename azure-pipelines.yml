@@ -37,7 +37,7 @@ steps:
         solutionOrProjectPath: $(System.DefaultWorkingDirectory)\pipelines-dotnet-core.csproj
         failBuildLevelSelector: 'Error'
         failBuildOnCodeIssues: true
-        additionalArguments: /disable-settings-layers:SolutionPersonal --properties:Configuration=$(BuildConfiguration)
+        #additionalArguments: /disable-settings-layers:SolutionPersonal --properties:Configuration=$(BuildConfiguration)
         #resultsOutputFilePath: $(System.DefaultWorkingDirectory)\tests-results\ReportGenerator\ResharperResults.xml
 
 - task: DotNetCoreCLI@2
