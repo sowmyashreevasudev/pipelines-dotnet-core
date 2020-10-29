@@ -29,7 +29,7 @@ steps:
   displayName: Build
   inputs:
     command: build
-    projects: '**/*.csproj'
+    projects: pipelines-dotnet-core.csproj
     arguments: '--configuration $(buildConfiguration)' # Update this to match your need
 
 - task: ResharperCli@2
