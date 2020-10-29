@@ -34,8 +34,11 @@ steps:
 
 - task: ResharperCli@2
   inputs:
-        solutionOrProjectPath: '**/*.csproj'
-        failBuildLevelSelector: 'Warning'
+        solutionOrProjectPath: $(System.DefaultWorkingDirectory)\TTM.Insights.Api.sln
+        failBuildLevelSelector: 'Error'
+        failBuildOnCodeIssues: true
+        additionalArguments: /disable-settings-layers:SolutionPersonal --properties:Configuration=$(BuildConfiguration)
+        resultsOutputFilePath: $(Build.ArtifactStagingDirectory)/tests-results/ReportGenerator/ResharperResults.xml
 
 - task: DotNetCoreCLI@2
   inputs:
