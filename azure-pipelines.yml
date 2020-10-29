@@ -27,6 +27,11 @@ steps:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)' # Update this to match your need
+
+- task: ResharperCli@2
+  inputs:
+        solutionOrProjectPath: '''**/*.csproj'''
+        failBuildLevelSelector: 'Warning'
   
 # do this after other tasks such as building
 - task: DotNetCoreCLI@2
