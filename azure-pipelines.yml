@@ -4,7 +4,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
 - feature/*
 
 pool:
@@ -12,6 +11,11 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  Major: '1'
+  Minor: '0'
+  Patch: 'Enter patch number'
+
+name: $(Major).$(Minor).$(Patch)
 
 steps:
 - task: UseDotNet@2
