@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
   Major: '1'
   Minor: '0'
-  Patch: 'Enter patch number'
+  Patch: '0'
 
 name: $(Major).$(Minor).$(Patch)
 
